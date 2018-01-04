@@ -31,7 +31,7 @@ class Realisations
     /**
      * @var string
      *
-     * @ORM\Column(name="langage", type="string", length=40, nullable=false)
+     * @ORM\Column(name="langage", type="string", length=255, nullable=false)
      */
     private $langage;
 

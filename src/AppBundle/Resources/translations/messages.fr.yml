@@ -13,7 +13,7 @@ home:
           admin, éditer le contenu du blog, éditer les utilisateurs et faire la modération des commentaires.
   part5: >
           Pour le réaliser j'ai utilisé les bundles FOSUserBundle, Sonata Admin Bundle,
-          Sonata User Bundle, JMSI18nRoutingBundle
+          JMSI18nRoutingBundle
   part6: Bonne découverte !
 
 navbar&footer:
