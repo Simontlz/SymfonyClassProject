@@ -112,4 +112,4 @@ sonata_block:
         # ...
 sonata_admin:
     title:      Administration
-    title_logo: bundles/sonataadmin/admin.png
+    title_logo: images/logo/admin.png

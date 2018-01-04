@@ -1,10 +1,11 @@
-
 {% extends "AppBundle::layout.html.twig" %}
+
 
 {% block title %}
 {% endblock %}
 
 {% block body %}
+
     <div class="container">
 
         {############################### Partie Article #############################################}
@@ -38,7 +39,11 @@
                                 <div class="col m5">
                                     <div class="row">
                                         <div class="col m3">
-                                            <img width="40" height="50" src="{{ asset('uploads/' ~ commentaire.user.image.filename) }}" alt="user profile picture">
+                                            {% if commentaire.user.image is null %}
+                                                <div style="width: 40px; height: 50px; border: 1px black solid; padding: 5px"> <div style="transform: rotate(20deg); font-size: x-small;">Pas d'avatar</div></div>
+                                            {% else %}
+                                                <img width="40" height="50" src="{{ asset('uploads/' ~ commentaire.user.image.filename) }}" alt="user profile picture">
+                                            {% endif %}
                                         </div>
                                         <div class="col m9">
                                             Posté par: <em>{{ commentaire.user }}<br></em>
@@ -48,7 +53,9 @@
                                 </div>
                                 <div class="col m7">
                                     <div class="comContent">
-                                        <blockquote> {{ commentaire.content }}</blockquote>
+                                        {# Couleurs aléatoires pour blockquotes #}
+                                        {% set values = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']%}
+                                        <blockquote style="border-left-color: #{{random(values)~ random(values)~ random(values)~ random(values)~ random(values)~ random(values)  }};"> {{ commentaire.content }}</blockquote>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +110,7 @@
             $('#coms').hide();
             $('#comButton').click(function () {
                 $('#coms').toggle( "slide", 2000);
-            })
+            });
         })
     </script>
 {% endblock %}
