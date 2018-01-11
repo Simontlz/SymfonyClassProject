@@ -3,11 +3,13 @@
 
 {% block body %}
     <div class="container">
-        <h1>page d'accueil du blog</h1>
+        <h1>Page d'accueil du blog</h1>
         <p>
-            Hello, bienvenue sur la page d'accueil de la section blog. Ici, si vous êtes authentifié en tant qu'administrateur,
-            vous pourrez ajouter, modifier ou supprimer des articles et accéder à la section de modération des commentaires.
+            Bienvenue sur la page d'accueil de la partie "blog". Ci-dessous, vous trouverez un liste de tous les articles écrits.
         </p>
+        <div class="blue-grey darken-2" style="padding:10px;">
+            {{ render(controller("AppBundle:Blog:menu", {'limit': 40})) }}
+        </div>
     </div>
 
 {% endblock %}

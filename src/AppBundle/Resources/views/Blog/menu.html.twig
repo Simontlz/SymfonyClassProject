@@ -2,8 +2,8 @@
     {% for article in listArticles %}
         {% if article.published %}
             <li>
-                - <a class="white-text hoverable" href="{{ path('blog_article', {'id': article.id}) }}">
-                    {{ article.title }}
+                 <a class="white-text hoverable" href="{{ path('blog_article', {'id': article.id}) }}">
+                    - {{ article.title }}
                 </a>
             </li>
         {% endif %}
