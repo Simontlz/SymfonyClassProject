@@ -13,7 +13,7 @@ Une fois identifié en tant qu'admin, vous pourrez depuis la barre latérale acc
 
 Il faut être identifié (pas forcément en tant qu'admin) pour pouvoir poster un commentaire sur un article.
 
-###Possibles erreurs
+### Possibles erreurs
 * Si une erreur comme celle qui suit apparaît : 
 ```
 [Symfony\Component\Debug\Exception\ContextErrorException]
